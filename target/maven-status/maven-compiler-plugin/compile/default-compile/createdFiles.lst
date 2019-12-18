@@ -1,0 +1,13 @@
+tr\edu\bilkent\cs\gshare\backend\model\MemberModel.class
+tr\edu\bilkent\cs\gshare\backend\configuration\Swagger.class
+tr\edu\bilkent\cs\gshare\backend\service\MemberService.class
+tr\edu\bilkent\cs\gshare\backend\Application.class
+tr\edu\bilkent\cs\gshare\backend\configuration\LoggerConf.class
+tr\edu\bilkent\cs\gshare\backend\configuration\Jackson.class
+tr\edu\bilkent\cs\gshare\backend\model\CreateMemberModel.class
+tr\edu\bilkent\cs\gshare\backend\domain\Member.class
+tr\edu\bilkent\cs\gshare\backend\mapper\MemberMapperImpl.class
+tr\edu\bilkent\cs\gshare\backend\controller\MemberController.class
+tr\edu\bilkent\cs\gshare\backend\repository\MemberRepository.class
+tr\edu\bilkent\cs\gshare\backend\model\UpdateMemberModel.class
+tr\edu\bilkent\cs\gshare\backend\mapper\MemberMapper.class

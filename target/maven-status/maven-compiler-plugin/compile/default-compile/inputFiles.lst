@@ -1,0 +1,12 @@
+D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\controller\MemberController.java
+D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\repository\MemberRepository.java
+D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\model\CreateMemberModel.java
+D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\domain\Member.java
+D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\configuration\Swagger.java
+D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\model\MemberModel.java
+D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\service\MemberService.java
+D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\model\UpdateMemberModel.java
+D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\Application.java
+D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\configuration\Jackson.java
+D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\mapper\MemberMapper.java
+D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\configuration\LoggerConf.java

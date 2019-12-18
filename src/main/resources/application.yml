@@ -1,0 +1,44 @@
+server:
+  port: 8090
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:postgresql://34.89.207.234/gshare?stringtype=unspecified&ApplicationName=GShareBackend
+    username: kaan
+    password: zaRcJwhsh2kvWVQYdFtm
+    platform: postgresql
+    continue-on-error: false
+    initialization-mode: never
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    generate-ddl: false
+    show-sql: true
+    properties:
+      hibernate:
+        ddl-auto: none
+        use_sql_comments: false
+        format_sql: true
+        type: TRACE
+        globally_quoted_identifiers: false
+        id.new_generator_mappings: true
+        temp.use_jdbc_metadata_defaults: false
+
+swagger:
+  app:
+    name: '@project.name@'
+    description: '@project.description@'
+    version: '@project.version@'
+    buildTime: '@timestamp@'
+
+logging:
+  level: #levels: OFF < FATAL < ERROR < WARN < INFO < DEBUG < TRACE < ALL
+    root: INFO
+    tr.edu.bilkent.cs.gshare.backend: TRACE
+  pattern:
+    console: "%d{HH:mm:ss} %-5p %c{1}:%L - %m%n"
