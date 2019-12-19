@@ -25,6 +25,8 @@ public class MemberController
 	{
 		return service.createMember( model );
 	}
+	
+	// kaaan babababasdgas
 
 	@PostMapping(value = "update")
 	public MemberModel updateMember( UpdateMemberModel model )
