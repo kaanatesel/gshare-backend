@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,6 +37,12 @@ public class ProductController
 		return service.getAllProduct();
 	}
 
+	@GetMapping("{productId}/")
+	public ProductModel findByProductId( @PathVariable(value = "productId", required = true) Integer productId )
+	{
+		return service.findByProductId( productId );
+	}
+
 	@GetMapping("getUserProduct/{memberId}")
 	public List<Product> findProductByMemeberId( @PathVariable(value = "memberId", required = true) Integer memberId )
 	{
@@ -46,5 +53,11 @@ public class ProductController
 	public ProductModel updateProduct( UpdateProductModel model )
 	{
 		return service.updateProduct( model );
+	}
+
+	@DeleteMapping("{productId}/")
+	public void deleteProduct( @PathVariable(value = "productId", required = true) Integer productId )
+	{
+		service.deleteProduct( productId );
 	}
 }

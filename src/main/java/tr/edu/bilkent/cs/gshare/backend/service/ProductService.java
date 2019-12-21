@@ -53,4 +53,22 @@ public class ProductService
 		ProductModel prModel = mapper.getProductModelFromProduct( product );
 		return prModel;
 	}
+
+	public void deleteProduct( Integer productId )
+	{
+		Product product = repository.findById( productId )
+				.orElseThrow( () -> new RuntimeException( "Cannot find product with id " + productId ) );
+		repository.delete( product );
+	}
+
+	public ProductModel findByProductId( Integer productId )
+	{
+		Product product = repository.findById( productId )
+				.orElseThrow( () -> new RuntimeException( "Cannot find product with id " + productId ) );
+
+		ProductModel model = mapper.getProductModelFromProduct( product );
+
+		return model;
+	}
+
 }
