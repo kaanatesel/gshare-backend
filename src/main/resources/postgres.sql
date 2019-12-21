@@ -30,6 +30,16 @@ create table product (
   price integer not null check(price > 0)
 );
 
+
+
+rateProcut table
+  product_reposen_id
+  commenttextlend 
+  commenttextBraow
+  rateLend
+  reteBarw
+
+
 create table product_objects (
   id serial primary key,
   product_id integer not null references product(id),

@@ -9,7 +9,7 @@ import tr.edu.bilkent.cs.gshare.backend.model.UpdateMemberModel;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2019-12-21T17:03:41+0300",
+    date = "2019-12-22T01:58:17+0300",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 11.0.2 (Oracle Corporation)"
 )
 @Component
