@@ -10,6 +10,7 @@ tr\edu\bilkent\cs\gshare\backend\controller\MemberController.class
 tr\edu\bilkent\cs\gshare\backend\controller\ProductController.class
 tr\edu\bilkent\cs\gshare\backend\repository\MemberRepository.class
 tr\edu\bilkent\cs\gshare\backend\mapper\ProductMapperImpl.class
+tr\edu\bilkent\cs\gshare\backend\model\product\UpdateProductModel.class
 tr\edu\bilkent\cs\gshare\backend\model\ProductCategoryModel.class
 tr\edu\bilkent\cs\gshare\backend\repository\ProductCategoryRepository.class
 tr\edu\bilkent\cs\gshare\backend\controller\ProductCategoryController.class
