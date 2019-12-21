@@ -2,7 +2,6 @@ package tr.edu.bilkent.cs.gshare.backend.domain;
 
 import java.io.Serializable;
 import java.time.Instant;
-import java.time.OffsetDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

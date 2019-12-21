@@ -1,5 +1,7 @@
 package tr.edu.bilkent.cs.gshare.backend.service;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -56,5 +58,4 @@ public class MemberService
 		member.setActive( false );
 		repository.save( member );
 	}
-
 }

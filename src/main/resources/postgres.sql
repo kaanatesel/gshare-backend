@@ -23,6 +23,7 @@ create table product_category (
 
 create table product (
   id serial primary key,
+  member_id not null integer references member(id),
   product_category_id integer references product_category(id),
   name text not null,
   description text not null,
@@ -52,7 +53,7 @@ create table product_response (
   id serial primary key,
   product_request_id integer references product_request(id),
   create_date timestamptz not null default now(),
-  response_type_id integer not null  references product_response_type(id),
+  response_type_id integer not null references product_response_type(id),
   deadline timestamptz not null
 );
 
