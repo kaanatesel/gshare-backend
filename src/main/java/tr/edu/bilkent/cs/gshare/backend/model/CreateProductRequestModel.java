@@ -8,7 +8,9 @@ import lombok.Data;
 public class CreateProductRequestModel
 {
 	@NotNull
-	private int requesterId;
+	private Integer requesterId;
 	@NotNull
-	private int productId;
+	private Integer productId;
+	@NotNull
+	private Integer ownerId;
 }

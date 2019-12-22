@@ -12,7 +12,6 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Generated;
 import org.hibernate.annotations.GenerationTime;
 
-import lombok.Builder.Default;
 import lombok.Data;
 
 @Data
@@ -37,5 +36,8 @@ public class ProductRequest
 	@Column(name = "active", insertable = false, nullable = false)
 	@Generated(GenerationTime.INSERT)
 	private boolean active;
+
+	@Column(name = "owner_id", nullable = false)
+	private Integer ownerId;
 
 }

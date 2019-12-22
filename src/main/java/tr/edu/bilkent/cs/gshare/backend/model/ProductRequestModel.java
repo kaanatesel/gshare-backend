@@ -9,11 +9,13 @@ public class ProductRequestModel
 {
 	private Integer id;
 
-	private int requesterId;
+	private Integer requesterId;
 
-	private int productId;
+	private Integer productId;
 
 	private Instant createDate;
 
 	private boolean active;
+
+	private Integer ownerId;
 }

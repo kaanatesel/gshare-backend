@@ -28,10 +28,26 @@ public class ProductRequestService
 		return productRequestModel;
 	}
 
-	public List<ProductRequest> getMemberAll( Integer memberId )
+	public List<ProductRequest> findMemberAll( Integer memberId )
 	{
-		List<ProductRequest> listProductRequest = repository.findByRequesterId( memberId );
+		List<ProductRequest> listRequestOwner = repository.findByOwnerIdAndActive( memberId, true );
+		List<ProductRequest> listRequestRequester = repository.findByRequesterIdAndActive( memberId, true );
+		listRequestOwner.addAll( listRequestRequester );
+		return listRequestOwner;
+	}
+
+	public List<ProductRequest> findAllByOwnerId( Integer requesterId )
+	{
+		List<ProductRequest> listProductRequest = repository.findByRequesterIdAndActive( requesterId, true );
 		return listProductRequest;
+	}
+
+	public void delete( Integer productRequestId )
+	{
+		ProductRequest request = repository.findById( productRequestId )
+				.orElseThrow( () -> new RuntimeException( "Cannot find product request with id" + productRequestId ) );
+		request.setActive( false );
+		repository.save( request );
 	}
 
 }

@@ -30,8 +30,6 @@ create table product (
   price integer not null check(price > 0)
 );
 
-
-
 rateProcut table
   product_reposen_id
   commenttextlend 
@@ -51,6 +49,7 @@ create table product_request (
   requester_id integer references member(id),
   product_id integer not null references product(id),
   create_date timestamptz not null default now(),
+  owner_id integer not null references member(id),
   active boolean not null default true
 );
 

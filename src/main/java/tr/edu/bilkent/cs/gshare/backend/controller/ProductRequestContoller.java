@@ -6,9 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.core.sym.Name;
+
+import io.swagger.models.auth.In;
 import tr.edu.bilkent.cs.gshare.backend.domain.ProductRequest;
 import tr.edu.bilkent.cs.gshare.backend.model.CreateProductRequestModel;
 import tr.edu.bilkent.cs.gshare.backend.model.ProductRequestModel;
@@ -27,10 +31,25 @@ public class ProductRequestContoller
 		return service.create( model );
 	}
 
-	@GetMapping("getMemberAll/{memberId}")
-	public List<ProductRequest> getMemberAll( @PathVariable(name = "memberId", required = true) Integer memberId )
+	@GetMapping("findAllByOwnerId/{ownerId}")
+	public List<ProductRequest> findAllByOwnerIdAndActive(
+			@PathVariable(name = "ownerId", required = true) Integer ownerId )
 	{
-		return service.getMemberAll( memberId );
+		return service.findAllByOwnerId( ownerId );
 	}
+
+	@GetMapping("findMemberAll/{memberId}")
+	public List<ProductRequest> findMemberAll( @PathVariable(name = "memberId", required = true) Integer memberId )
+	{
+		return service.findMemberAll( memberId );
+	}
+
+	@PutMapping("delete/{productRequestId}")
+	public void delete( @PathVariable(name = "productRequestId", required = true) Integer productRequestId )
+	{
+		service.delete( productRequestId );
+	}
+	
+	
 
 }

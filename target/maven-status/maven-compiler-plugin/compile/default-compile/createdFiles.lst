@@ -1,4 +1,6 @@
+tr\edu\bilkent\cs\gshare\backend\mapper\MessageMapper.class
 tr\edu\bilkent\cs\gshare\backend\model\ProductRequestModel.class
+tr\edu\bilkent\cs\gshare\backend\repository\MessageRepository.class
 tr\edu\bilkent\cs\gshare\backend\service\ProductRequestService.class
 tr\edu\bilkent\cs\gshare\backend\configuration\Swagger.class
 tr\edu\bilkent\cs\gshare\backend\service\MemberService.class
@@ -6,6 +8,7 @@ tr\edu\bilkent\cs\gshare\backend\configuration\Jackson.class
 tr\edu\bilkent\cs\gshare\backend\model\CreateProductRequestModel.class
 tr\edu\bilkent\cs\gshare\backend\repository\ProductRepository.class
 tr\edu\bilkent\cs\gshare\backend\mapper\ProductCategoryMapper.class
+tr\edu\bilkent\cs\gshare\backend\model\CreateMessageModel.class
 tr\edu\bilkent\cs\gshare\backend\mapper\DemandMapper.class
 tr\edu\bilkent\cs\gshare\backend\repository\MemberRepository.class
 tr\edu\bilkent\cs\gshare\backend\mapper\ProductMapperImpl.class
@@ -17,9 +20,11 @@ tr\edu\bilkent\cs\gshare\backend\model\product\CreateProductModel.class
 tr\edu\bilkent\cs\gshare\backend\domain\Product.class
 tr\edu\bilkent\cs\gshare\backend\service\ProductService.class
 tr\edu\bilkent\cs\gshare\backend\configuration\LoggerConf.class
+tr\edu\bilkent\cs\gshare\backend\model\MessageModel.class
 tr\edu\bilkent\cs\gshare\backend\domain\Member.class
 tr\edu\bilkent\cs\gshare\backend\mapper\ProductCategoryMapperImpl.class
 tr\edu\bilkent\cs\gshare\backend\model\CreateDemandModel.class
+tr\edu\bilkent\cs\gshare\backend\mapper\MessageMapperImpl.class
 tr\edu\bilkent\cs\gshare\backend\mapper\ProductRequestMapper.class
 tr\edu\bilkent\cs\gshare\backend\mapper\ProductRequestMapperImpl.class
 tr\edu\bilkent\cs\gshare\backend\model\UpdateMemberModel.class
@@ -27,6 +32,8 @@ tr\edu\bilkent\cs\gshare\backend\controller\DemandController.class
 tr\edu\bilkent\cs\gshare\backend\model\product\ProductModel.class
 tr\edu\bilkent\cs\gshare\backend\model\CreateProductCategoryModel.class
 tr\edu\bilkent\cs\gshare\backend\model\MemberModel.class
+tr\edu\bilkent\cs\gshare\backend\domain\Message.class
+tr\edu\bilkent\cs\gshare\backend\service\MessageService.class
 tr\edu\bilkent\cs\gshare\backend\repository\ProductRequestRepository.class
 tr\edu\bilkent\cs\gshare\backend\model\CreateMemberModel.class
 tr\edu\bilkent\cs\gshare\backend\mapper\MemberMapperImpl.class
@@ -37,6 +44,7 @@ tr\edu\bilkent\cs\gshare\backend\model\product\UpdateProductModel.class
 tr\edu\bilkent\cs\gshare\backend\domain\ProductRequest.class
 tr\edu\bilkent\cs\gshare\backend\model\ProductCategoryModel.class
 tr\edu\bilkent\cs\gshare\backend\model\DemandModel.class
+tr\edu\bilkent\cs\gshare\backend\controller\MessageController.class
 tr\edu\bilkent\cs\gshare\backend\service\ProductCategoryService.class
 tr\edu\bilkent\cs\gshare\backend\Application.class
 tr\edu\bilkent\cs\gshare\backend\domain\Demand.class
