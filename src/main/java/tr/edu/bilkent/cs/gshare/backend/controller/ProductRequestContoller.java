@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fasterxml.jackson.core.sym.Name;
-
-import io.swagger.models.auth.In;
 import tr.edu.bilkent.cs.gshare.backend.domain.ProductRequest;
 import tr.edu.bilkent.cs.gshare.backend.model.CreateProductRequestModel;
 import tr.edu.bilkent.cs.gshare.backend.model.ProductRequestModel;
@@ -49,7 +46,5 @@ public class ProductRequestContoller
 	{
 		service.delete( productRequestId );
 	}
-	
-	
 
 }
