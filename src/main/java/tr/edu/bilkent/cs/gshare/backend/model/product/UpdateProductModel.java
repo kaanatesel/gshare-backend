@@ -15,4 +15,6 @@ public class UpdateProductModel
 	private String description;
 
 	private int price;
+
+	private Boolean active;
 }

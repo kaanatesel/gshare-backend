@@ -60,4 +60,16 @@ public class ProductController
 	{
 		service.deleteProduct( productId );
 	}
+
+	@GetMapping("getAllActive/")
+	public List<Product> getActive()
+	{
+		return service.getAllActive( true );
+	}
+
+	@GetMapping("getMemberDisActive/{memberId}")
+	public List<Product> getActive( @PathVariable(value = "memberId", required = true) Integer memberId )
+	{
+		return service.getMemberDisActive( memberId, false );
+	}
 }

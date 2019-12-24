@@ -10,11 +10,12 @@ public class ProductModel
 	private int productCategory;
 
 	private int memberId;
-	
+
 	private String name;
 
 	private String description;
 
 	private int price;
 
+	private Boolean active;
 }

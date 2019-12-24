@@ -34,6 +34,7 @@ tr\edu\bilkent\cs\gshare\backend\mapper\ProductRequestMapperImpl.class
 tr\edu\bilkent\cs\gshare\backend\model\UpdateMemberModel.class
 tr\edu\bilkent\cs\gshare\backend\controller\DemandController.class
 tr\edu\bilkent\cs\gshare\backend\model\product\ProductModel.class
+tr\edu\bilkent\cs\gshare\backend\model\UpdateMemberGModel.class
 tr\edu\bilkent\cs\gshare\backend\model\CreateProductCategoryModel.class
 tr\edu\bilkent\cs\gshare\backend\repository\ProductReponseTypeRepository.class
 tr\edu\bilkent\cs\gshare\backend\model\MemberModel.class

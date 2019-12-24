@@ -71,4 +71,16 @@ public class ProductService
 		return model;
 	}
 
+	public List<Product> getAllActive( boolean bool )
+	{
+		List<Product> list = repository.findByActive( bool );
+		return list;
+	}
+
+	public List<Product> getMemberDisActive( Integer memberId, boolean bool )
+	{
+		List<Product> list = repository.findByMemberIdAndActive( memberId, bool );
+		return list;
+	}
+
 }

@@ -7,7 +7,7 @@ import tr.edu.bilkent.cs.gshare.backend.domain.ProductCategory;
 public class CreateProductModel
 {
 	private int productCategory;
-	
+
 	private int memberId;
 
 	private String name;

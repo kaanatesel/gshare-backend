@@ -6,7 +6,8 @@ create table member (
   password varchar(100) not null,
   name varchar(100) not null,
   create_date timestamptz not null default now(),
-  active boolean not null default true
+  active boolean not null default true,
+  g integer not null default 200
 );
 
 create table member_report (
@@ -27,7 +28,8 @@ create table product (
   product_category_id integer references product_category(id),
   name text not null,
   description text not null,
-  price integer not null check(price > 0)
+  price integer not null check(price > 0),
+  active boolean not null default true
 );
 
 rateProcut table
@@ -78,7 +80,7 @@ create table member_message (
 create table product_demand (
   id serial primary key,
   requester_id integer references member(id),
-  product_description text not null,
+    text not null,
   min_price integer not null,
   max_price integer not null,  
   create_date timestamptz not null default now(),

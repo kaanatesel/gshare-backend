@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Generated;
+import org.hibernate.annotations.GenerationTime;
+
 import lombok.Data;
 
 @Data
@@ -32,5 +35,8 @@ public class Product
 
 	@Column(name = "price", nullable = false)
 	private int price;
+
+	@Generated(GenerationTime.INSERT)
+	private Boolean active;
 
 }

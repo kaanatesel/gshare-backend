@@ -13,7 +13,7 @@ public class UpdateMemberModel
 	@NotNull
 	@Min(1)
 	private Integer id;
-	
+
 	@NotNull
 	@Email
 	private String email;
@@ -25,4 +25,6 @@ public class UpdateMemberModel
 	@NotNull
 	@Size(min = 5, max = 100)
 	private String name;
+
+	private Integer g;
 }

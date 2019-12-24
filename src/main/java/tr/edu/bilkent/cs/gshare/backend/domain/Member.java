@@ -39,4 +39,8 @@ public class Member implements Serializable
 	@Column(name = "active", insertable = false, nullable = false)
 	@Generated(GenerationTime.INSERT)
 	private Boolean active;
+
+	@Generated(GenerationTime.INSERT)
+	private Integer g;
+
 }

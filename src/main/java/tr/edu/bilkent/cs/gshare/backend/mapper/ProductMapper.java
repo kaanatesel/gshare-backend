@@ -14,6 +14,7 @@ public abstract class ProductMapper
 {
 
 	@Mapping(target = "id", ignore = true)
+	@Mapping(target = "active", ignore = true)
 	public abstract Product getProductFromCreateProductModel( CreateProductModel model );
 
 	public abstract ProductModel getProductModelFromProduct( Product model );

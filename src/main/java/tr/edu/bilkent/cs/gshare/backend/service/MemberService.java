@@ -7,6 +7,7 @@ import tr.edu.bilkent.cs.gshare.backend.domain.Member;
 import tr.edu.bilkent.cs.gshare.backend.mapper.MemberMapper;
 import tr.edu.bilkent.cs.gshare.backend.model.CreateMemberModel;
 import tr.edu.bilkent.cs.gshare.backend.model.MemberModel;
+import tr.edu.bilkent.cs.gshare.backend.model.UpdateMemberGModel;
 import tr.edu.bilkent.cs.gshare.backend.model.UpdateMemberModel;
 import tr.edu.bilkent.cs.gshare.backend.repository.MemberRepository;
 
@@ -55,5 +56,15 @@ public class MemberService
 
 		member.setActive( false );
 		repository.save( member );
+	}
+
+	public MemberModel updateMemberG( UpdateMemberGModel model )
+	{
+		Member member = repository.findById( model.getId() )
+				.orElseThrow( () -> new RuntimeException( "Cannot find member with id " + model.getId() ) );
+		member.setG( model.getG() );
+		repository.save( member );
+		MemberModel memberModel = mapper.getMemberModelFromMember( member );
+		return memberModel;
 	}
 }

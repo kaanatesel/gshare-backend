@@ -25,6 +25,7 @@ D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gsh
 D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\mapper\ProductMapper.java
 D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\domain\Message.java
 D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\mapper\MemberMapper.java
+D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\model\UpdateMemberGModel.java
 D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\repository\MemberRepository.java
 D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\repository\ProductCategoryRepository.java
 D:\projects\Java-11-workspace\gshare-backend\src\main\java\tr\edu\bilkent\cs\gshare\backend\service\ProductResponseTypeService.java

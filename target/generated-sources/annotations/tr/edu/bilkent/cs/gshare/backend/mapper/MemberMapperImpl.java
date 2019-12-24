@@ -5,11 +5,12 @@ import org.springframework.stereotype.Component;
 import tr.edu.bilkent.cs.gshare.backend.domain.Member;
 import tr.edu.bilkent.cs.gshare.backend.model.CreateMemberModel;
 import tr.edu.bilkent.cs.gshare.backend.model.MemberModel;
+import tr.edu.bilkent.cs.gshare.backend.model.UpdateMemberGModel;
 import tr.edu.bilkent.cs.gshare.backend.model.UpdateMemberModel;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2019-12-24T01:39:43+0300",
+    date = "2019-12-24T04:03:51+0300",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 11.0.2 (Oracle Corporation)"
 )
 @Component
@@ -43,6 +44,7 @@ public class MemberMapperImpl extends MemberMapper {
         memberModel.setPassword( member.getPassword() );
         memberModel.setName( member.getName() );
         memberModel.setCreateDate( member.getCreateDate() );
+        memberModel.setG( member.getG() );
 
         return memberModel;
     }
@@ -56,5 +58,18 @@ public class MemberMapperImpl extends MemberMapper {
         member.setEmail( model.getEmail() );
         member.setPassword( model.getPassword() );
         member.setName( model.getName() );
+    }
+
+    @Override
+    public Member getMemberFromUpdateMemberGModel(UpdateMemberGModel model) {
+        if ( model == null ) {
+            return null;
+        }
+
+        Member member = new Member();
+
+        member.setId( model.getId() );
+
+        return member;
     }
 }
