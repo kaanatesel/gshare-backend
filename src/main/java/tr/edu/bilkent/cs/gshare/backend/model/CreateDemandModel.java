@@ -10,10 +10,6 @@ public class CreateDemandModel
 
 	private String productDescription;
 
-	private Integer minPrice;
-
-	private Integer maxPrice;
-
 	private Integer categoryId;
 
 }

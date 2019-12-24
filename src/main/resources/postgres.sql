@@ -64,7 +64,7 @@ create table product_response (
   id serial primary key,
   product_request_id integer references product_request(id),
   create_date timestamptz not null default now(),
-  response_type_id integer not null references product_response_type(id),
+  response_type_id integer not null references product_response_type(id) default,
   deadline timestamptz not null
 );
 
@@ -80,11 +80,10 @@ create table member_message (
 create table product_demand (
   id serial primary key,
   requester_id integer references member(id),
-    text not null,
-  min_price integer not null,
-  max_price integer not null,  
+  product_desciription text not null, 
   create_date timestamptz not null default now(),
   active boolean not null default true,
+  check(min_price > 0 and max_price > min_price)
   check(min_price > 0 and max_price > min_price)
 );
 

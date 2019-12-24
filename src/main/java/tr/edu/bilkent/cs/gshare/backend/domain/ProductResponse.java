@@ -8,34 +8,40 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.Generated;
 import org.hibernate.annotations.GenerationTime;
 
+import io.swagger.models.auth.In;
 import lombok.Data;
 
 @Data
 @Entity
-@Table(schema = "public", name = "product_demand")
-public class Demand
+@Table(schema = "public", name = "product_response")
+public class ProductResponse
 {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	@Column(name = "requester_id")
-	private Integer requesterId;
-
-	@Column(name = "product_description")
-	private String productDescription;
+	@Column(name = "product_request_id", updatable = false)
+	private Integer productRequestId;
 
 	@Column(name = "create_date", insertable = false, updatable = false)
+	@Generated(GenerationTime.ALWAYS)
 	private Instant createDate;
 
-	@Generated(GenerationTime.INSERT)
-	private Boolean active;
+	@Column(name = "response_type_id", updatable = false)
+	private Integer responseTypeId;
 
-	@Column(name = "category_id", nullable = false)
-	private Integer categoryId;
+	@NotNull
+	private Instant deadline;
+
+	@Column(name = "owner_id", updatable = false)
+	private Integer ownerId;
+
+	@Column(name = "lender_id", updatable = false)
+	private Integer lenderId;
 
 }

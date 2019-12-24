@@ -11,8 +11,8 @@ public interface DemandRepository extends CrudRepository<Demand, Integer>
 {
 	Optional<Demand> findByIdAndActive( Integer requesterId, boolean active );
 
-	List<Demand> findAllByCategoryId( Integer categoryId );
+	List<Demand> findAllByCategoryIdAndActive( Integer categoryId, boolean active );
 
-	List<Demand> findAllByRequesterId( Integer requesterId );
+	List<Demand> findAllByRequesterIdAndActive( Integer requesterId, boolean active );
 
 }

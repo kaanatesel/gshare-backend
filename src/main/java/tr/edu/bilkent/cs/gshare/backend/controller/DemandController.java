@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import tr.edu.bilkent.cs.gshare.backend.domain.Demand;
 import tr.edu.bilkent.cs.gshare.backend.model.CreateDemandModel;
 import tr.edu.bilkent.cs.gshare.backend.model.DemandModel;
+import tr.edu.bilkent.cs.gshare.backend.model.UpdateActiveDemandModel;
 import tr.edu.bilkent.cs.gshare.backend.model.UpdateDemandModel;
 import tr.edu.bilkent.cs.gshare.backend.service.DemandService;
 
@@ -53,6 +54,12 @@ public class DemandController
 		return service.findAllByMemberId( memberId );
 	}
 
+	@GetMapping("findAllByMemberIdDisactive/{memberId}")
+	public List<Demand> findAllByMemberIdDisactive( @PathVariable(name = "memberId", required = true) Integer memberId )
+	{
+		return service.findAllByMemberIdAndDisactive( memberId );
+	}
+
 	@PutMapping("update/{demandId}")
 	public DemandModel updateDemand( UpdateDemandModel model )
 	{
@@ -65,4 +72,9 @@ public class DemandController
 		service.deleteDemand( demandId );
 	}
 
+	@PutMapping("updateActive")
+	public DemandModel updateActive( UpdateActiveDemandModel model )
+	{
+		return service.updateActive( model );
+	}
 }

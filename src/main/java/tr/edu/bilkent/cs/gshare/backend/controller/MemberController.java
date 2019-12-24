@@ -51,4 +51,10 @@ public class MemberController
 	{
 		return service.updateMemberG( model );
 	}
+
+	@GetMapping("getByEmail/{email}")
+	public MemberModel getByEmail( @PathVariable(value = "email", required = true) String email )
+	{
+		return service.findByEmail( email );
+	}
 }

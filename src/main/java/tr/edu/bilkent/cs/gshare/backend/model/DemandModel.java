@@ -13,10 +13,6 @@ public class DemandModel
 
 	private String productDescription;
 
-	private Integer minPrice;
-
-	private Integer maxPrice;
-
 	private Instant createDate;
 
 	private Boolean active;

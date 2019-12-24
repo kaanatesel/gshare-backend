@@ -11,4 +11,5 @@ public interface MemberRepository extends CrudRepository<Member, Integer>
 
 	Optional<Member> findByIdAndActive( Integer memberId, boolean active );
 
+	Optional<Member> findByEmailAndActive( String email, boolean active );
 }

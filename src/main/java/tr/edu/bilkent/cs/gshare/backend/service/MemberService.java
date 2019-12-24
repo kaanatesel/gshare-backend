@@ -67,4 +67,12 @@ public class MemberService
 		MemberModel memberModel = mapper.getMemberModelFromMember( member );
 		return memberModel;
 	}
+
+	public MemberModel findByEmail( String email )
+	{
+		Member member = repository.findByEmailAndActive( email, true )
+				.orElseThrow( () -> new RuntimeException( "Cannot find member with email" + email ) );
+		MemberModel memberModel = mapper.getMemberModelFromMember( member );
+		return memberModel;
+	}
 }
